@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sondage — Utilisation d'Internet</title>
+  <link rel="stylesheet" href="hello.css"> 
+  
+</head>
+<body>
+  <main class="wrap" role="main">
+    <header>
+      <div class="logo">IN</div>
+      <div>
+        <h1>Questionnaire — Utilisation d'Internet</h1>
+        <p class="lead">Rapide, accessible — ça prend 2 minutes. Tes réponses restent locales (sur ton navigateur).</p>
+      </div>
+    </header>
+
+    <form id="survey" method="post" action="">
+     <!-- 1 -->
+     <fieldset>
+        <legend>1. Combien de fois par jour utilisez-vous Internet ?</legend>
+        <div class="options" role="radiogroup" aria-label="Combien de fois par jour">
+          <label class="option"><input type="radio" name="q1" value="Plusieurs fois par jour" required> Plusieurs fois par jour</label>
+          <label class="option"><input type="radio" name="q1" value="Une fois par jour"> Une fois par jour</label>
+          <label class="option"><input type="radio" name="q1" value="Quelques fois par semaine"> Quelques fois par semaine</label>
+          <label class="option"><input type="radio" name="q1" value="Rarement"> Rarement</label>
+        </div>
+      </fieldset>
+
+    <!-- 2 -->
+      <fieldset>
+        <legend>2. Quels sont vos principaux objectifs lorsque vous utilisez Internet ? (Choisissez jusqu'à 3 options)</legend>
+        <div class="options" id="q2">
+          <label class="option"><input type="checkbox" name="q2" value="Recherche d'informations"> Recherche d'informations</label>
+          <label class="option"><input type="checkbox" name="q2" value="Réseaux sociaux"> Réseaux sociaux</label>
+          <label class="option"><input type="checkbox" name="q2" value="Achat en ligne"> Achat en ligne</label>
+          <label class="option"><input type="checkbox" name="q2" value="Travail/Études"> Travail/Études</label>
+          <label class="option"><input type="checkbox" name="q2" value="Divertissement"> Divertissement (vidéos, musique, etc.)</label>
+          <label class="option">
+            <input type="checkbox" id="q2-autre-cb" name="q2" value="Autre"> Autre
+            <input type="text" id="q2-autre" name="q2-autre" placeholder="Précisez..." style="margin-left:auto;display:none">
+          </label>
+          <div class="small">Tu peux choisir jusqu'à <strong>3</strong> options. <span class="counter" id="c2">0</span>/3</div>
+        </div>
+      </fieldset>
+
+      <!-- 3 -->
+      <fieldset>
+        <legend>3. Quels sont les sites que vous visitez le plus souvent ?</legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="q3" value="Réseaux sociaux"> Réseaux sociaux (Facebook, Twitter, etc.)</label>
+          <label class="option"><input type="radio" name="q3" value="Sites d'information"> Sites d'information</label>
+          <label class="option"><input type="radio" name="q3" value="Sites de commerce électronique"> Sites de commerce électronique</label>
+          <label class="option"><input type="radio" name="q3" value="Sites de divertissement"> Sites de divertissement</label>
+          <label class="option">
+            <input type="radio" name="q3" value="Autre"> Autre
+            <input type="text" id="q3-autre" name="q3-autre" placeholder="Précisez..." style="margin-left:auto;display:none">
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- 4 -->
+      <fieldset>
+        <legend>4. Combien de temps passez-vous en moyenne sur Internet par jour ?</legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="q4" value="Moins de 1 heure" required> Moins de 1 heure</label>
+          <label class="option"><input type="radio" name="q4" value="1-2 heures"> 1-2 heures</label>
+          <label class="option"><input type="radio" name="q4" value="2-4 heures"> 2-4 heures</label>
+          <label class="option"><input type="radio" name="q4" value="Plus de 4 heures"> Plus de 4 heures</label>
+        </div>
+      </fieldset>
+
+      <!-- 5 -->
+      <fieldset>
+        <legend>5. Quels sont les appareils que vous utilisez le plus pour accéder à Internet ? (Choisissez jusqu'à 2 options)</legend>
+        <div class="options" id="q5">
+          <label class="option"><input type="checkbox" name="q5" value="Ordinateur portable"> Ordinateur portable</label>
+          <label class="option"><input type="checkbox" name="q5" value="Téléphone portable"> Téléphone portable</label>
+          <label class="option"><input type="checkbox" name="q5" value="Tablette"> Tablette</label>
+          <label class="option"><input type="checkbox" name="q5" value="Ordinateur de bureau"> Ordinateur de bureau</label>
+          <label class="option">
+            <input type="checkbox" id="q5-autre-cb" name="q5" value="Autre"> Autre
+            <input type="text" id="q5-autre" name="q5-autre" placeholder="Précisez..." style="margin-left:auto;display:none">
+          </label>
+          <div class="small">Max <strong>2</strong> choix. <span class="counter" id="c5">0</span>/2</div>
+        </div>
+      </fieldset>
+
+      <!-- 6 -->
+      <fieldset>
+        <legend>6. Avez-vous déjà acheté quelque chose en ligne ?</legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="q6" value="Oui" required> Oui</label>
+          <label class="option"><input type="radio" name="q6" value="Non"> Non</label>
+        </div>
+      </fieldset>
+
+      <!-- 7 -->
+      <fieldset>
+        <legend>7. Quels sont les moyens de paiement que vous utilisez le plus pour les achats en ligne ? (Choisissez jusqu'à 2 options)</legend>
+        <div class="options" id="q7">
+          <label class="option"><input type="checkbox" name="q7" value="Carte de crédit"> Carte de crédit</label>
+          <label class="option"><input type="checkbox" name="q7" value="PayPal"> PayPal</label>
+          <label class="option"><input type="checkbox" name="q7" value="Mobile Money"> Mobile Money</label>
+          <label class="option"><input type="checkbox" name="q7" value="Virement bancaire"> Virement bancaire</label>
+          <label class="option"><input type="checkbox" name="q7" value="Autre"> Autre</label>
+          <div class="small">Max <strong>2</strong> choix. <span class="counter" id="c7">0</span>/2</div>
+        </div>
+      </fieldset>
+
+      <!-- 8 -->
+      <fieldset>
+        <legend>8. Avez-vous déjà rencontré des problèmes de sécurité en ligne (piratage, phishing, etc.) ?</legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="q8" value="Oui" required> Oui</label>
+          <label class="option"><input type="radio" name="q8" value="Non"> Non</label>
+        </div>
+      </fieldset>
+
+      <!-- 9 -->
+      <fieldset>
+        <legend>9. Comment évaluez-vous votre niveau de compétence en informatique ?</legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="q9" value="Débutant" required> Débutant</label>
+          <label class="option"><input type="radio" name="q9" value="Intermédiaire"> Intermédiaire</label>
+          <label class="option"><input type="radio" name="q9" value="Avancé"> Avancé</label>
+          <label class="option"><input type="radio" name="q9" value="Expert"> Expert</label>
+        </div>
+      </fieldset>
+
+      <!-- 10 -->
+      <fieldset>
+        <legend>10. Quels sont les principaux obstacles que vous rencontrez lorsque vous utilisez Internet ? (Choisissez jusqu'à 2 options)</legend>
+        <div class="options" id="q10">
+          <label class="option"><input type="checkbox" name="q10" value="Connexion lente"> Connexion lente</label>
+          <label class="option"><input type="checkbox" name="q10" value="Problèmes de sécurité"> Problèmes de sécurité</label>
+          <label class="option"><input type="checkbox" name="q10" value="Manque de compétences"> Manque de compétences</label>
+          <label class="option"><input type="checkbox" name="q10" value="Coût élevé"> Coût élevé</label>
+          <label class="option"><input type="checkbox" name="q10" value="Autre"> Autre</label>
+          <div class="small">Max <strong>2</strong> choix. <span class="counter" id="c10">0</span>/2</div>
+        </div>
+      </fieldset>
+
+      <div class="actions" role="group" aria-label="Actions">
+        <button type="submit">Envoyer</button>
+        <button type="button" class="secondary" id="reset">Effacer</button>
+      </div>
+
+      <div id="feedback" class="result" aria-live="polite" style="display:none"></div>
+    </form>
+  </main>
+
+<script src="hello.js"></script>
+</body>
+</html>
